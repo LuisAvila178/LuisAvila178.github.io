@@ -1,0 +1,338 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    list-style: none;
+    text-decoration: none;
+}
+
+:root{
+    --colorPrincipal: #ffffff;
+    --colorTexto: #ffffff;
+    --colorFondo: #000000;
+    --colorNavegacion:#000000;
+    --fuenteGrande: 3.2rem;
+    --fuente-h2:1.30rem;
+    --fuente-p: .9rem;
+
+}
+
+*::selection{
+    background: var(--colorPrincipal);
+    color: rgb(255, 255, 255)000;
+}
+
+body{
+    color: var(--colorTexto);
+    background: var(--colorFondo);
+}
+
+header{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1000;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 160px;
+    background-color: var(--colorFondo);
+    font-family: "Zen Dots";
+    }
+.logo{
+    color: var(--colorPrincipal);
+    font-weight:lighter;
+    font-size: 2.5rem;
+    font-family: 'Zen Dots';
+    text-shadow: 2px 2px rgb(4, 243, 243);
+
+}
+
+.navegacion{
+    display: flex;
+}
+.navegacion a{ 
+    color:var(--colorTexto);
+    font-size: 1.1rem;
+    padding: 10px 20px;
+    font-weight: 600;
+    
+}
+.navegacion a:hover{
+    color: rgb(4, 243, 243);
+    transition: .4s;
+}
+
+    
+#icono-menu{
+    font-size: 2rem;
+    cursor: pointer;
+    display: none;
+}
+section{
+    padding: 95px 13%;
+}
+
+
+.inicio{
+    width: 100%;
+    min-height: 90vh;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    align-items: center;
+    font-family: 'Zen Dots';
+    
+}
+
+
+.img-inicio img {
+    max-width: 100%;
+    width: 700px;
+    height: auto;
+}
+.txt-inicio h1{
+    font-size: 50px;
+    color: var(--colorPrincipal);
+    color: #0ef;
+    text-shadow: 0 0 20px #0ef;
+
+}
+
+.txt-inicio h2{
+    font-size: 30px;
+    margin: 1rem 0 2rem ;
+}
+
+.boton{
+    position: relative;
+    display:inline-block;
+    padding: 10px 30px;
+    color: #0ef;
+    border-radius: .5rem;
+    font-weight: bold;
+    font-size: 2rem;
+    border: 2px solid #0ef;
+    text-decoration: none;
+    z-index: 1;
+    overflow: hidden;
+    transition: 1s;
+}
+
+    
+.boton::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -50px;
+    width: 0;
+    height: 100%;
+    background: turquoise;
+    transform: skew(35deg);
+    z-index: -1;
+    transition: 1s;
+}
+
+.boton:hover{
+    color: #fff;
+    box-shadow: 
+    0 0 10px #0ef,
+    0 0 20px #0ef,
+    0 0 40px #0ef,
+    0 0 80px #0ef,
+    0 0 160px #0ef;
+     
+
+}
+
+
+.boton:hover::before{
+    width: 100%;
+
+}
+
+.sobreNosotros{
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+    gap: 2.5rem;
+    align-items:center;
+    font-family:'Zen Dots';
+}
+
+.sobreN-img img{
+    max-width: 100%;
+    width: 480px;
+    height: auto;
+}
+
+.sobreN-img{ 
+    position: relative;
+}
+.imagen1,
+.imagen2{
+    position: absolute;
+    top: -190px;
+    left: -40px;
+}
+
+
+.imagen1,
+.imagen2{
+    width: 100%;
+    height: 100%;
+}
+
+.imagen2{
+    position: relative; 
+    left: 1050px;
+    top:  190px;
+
+}
+
+
+.sobreN-txt span{
+    color: var(--colorPrincipal);
+    font-weight: bold;
+    font-size: 50px;
+    position: absolute;
+    top: 90%;
+    margin: 0;
+    color: #0ef;
+    text-shadow: 0 0 20px #0ef;
+}
+
+
+.sobreN-txt h2{
+    font-size: 30px;
+
+}
+.sobreN-txt p{
+    margin: .8rem 0 1.8rem;
+    font-size: 20px;
+}
+
+.titulo{
+    text-align: center;
+}
+
+.titulo span{ color: #0ef;
+    text-shadow: 0 0 20px #0ef;
+    font-family: "Zen Dots";
+    font-size: 50px ;
+
+}
+
+.titulo h2{
+    color: var(--colorPrincipal);
+    font-weight: bold;
+    font-family: "Zen Dots";
+    font-size: 30px;
+
+}
+
+.Productos{
+    font-family: "Zen Dots";
+}
+
+
+
+.contenedor-productos{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, auto));
+    gap: 2rem;
+    align-items: center;
+
+    
+}
+    
+
+
+.contenido{
+    position: relative;
+    margin-top: 4rem;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    box-shadow: 
+    0 0 10px #0ef,
+    0 0 20px #0ef,
+    0 0 40px #0ef,
+    0 0 80px #0ef,
+    0 0 160px #0ef;
+    border-radius: .5rem;
+    
+}
+
+.contenido-img{
+    width: 250px;
+    height: 250px;
+    
+}
+
+
+.contenido-img img{
+    width: 100%;
+    height: 100%;
+}
+
+.contenido h2{
+    font-size: 1.4rem;
+    color: #fff;
+
+}
+
+.contenido span{
+    font-size: 30px;
+    color: #0ef;
+}
+
+.contenido i{
+    background:#0ef;
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 40px;
+    cursor: pointer;
+    padding: 7px 10px;
+    border-radius: 0.5rem 0 .5rem;
+
+}
+
+.contenedor-servicios{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, auto));
+    gap: 2rem;
+    margin-top: 4rem;
+}
+
+.servivios{
+    text-align: center;
+    padding: 20px 30px;
+
+}
+
+.servicios img{
+    width: 300px;
+    align-items: auto;
+}
+
+.servicios h3{ 
+    margin: 4px 0 10px;
+    color: #0ef;
+    font-size: 1.3rem;
+    font-family: "Zen Dots";
+    text-align: center;
+
+
+}
+
+.servicios p{
+    line-height: 1.7;
+    font-family: "Zen Dots";
+
+}
