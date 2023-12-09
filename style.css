@@ -50,6 +50,8 @@ header{
 
 }
 
+
+
 .navegacion{
     display: flex;
 }
@@ -63,6 +65,21 @@ header{
 .navegacion a:hover{
     color: rgb(4, 243, 243);
     transition: .4s;
+}
+
+.navegacion a::after{
+    content: "";
+    position: absolute;
+    background-color: #0ef;
+    height: 3px;
+    width: 100%;
+    left: 0;
+    padding: 0 3px;
+    margin: auto;
+    justify-content: space-around;
+    align-items: center;
+    bottom: -3px;
+
 }
 
     
@@ -336,3 +353,165 @@ section{
     font-family: "Zen Dots";
 
 }
+
+.botonC{
+    font-family:"Zen Dots";
+    position: relative;
+    display:inline-block;
+    padding: 10px 30px;
+    color: turquoise;
+    border-radius: .5rem;
+    font-weight: bold;
+    font-size: 2rem;
+    border: 3px solid turquoise;
+    text-decoration: none;
+    z-index: 1;
+    overflow: hidden;
+    transition: 1s;
+    background-color: #000000;
+
+}
+
+.botonC::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -50px;
+    width: 0;
+    height: 100%;
+    background: turquoise;
+    transform: skew(35deg);
+    z-index: -1;
+    transition: 1s;
+}
+
+.botonC:hover{
+    font-family:"Zen Dots";
+    color: #ffffff;
+    box-shadow: 
+    0 0 10px rgb(0, 0, 0),
+    0 0 20px #0ef,
+    0 0 40px #0ef,
+    0 0 80px #0ef,
+    0 0 160px #0ef;
+
+
+}
+
+.botonC:hover::before{
+    width: 100%;
+}
+
+.cta{
+    background: #fff;
+    padding: 70px 0;
+    text-align: center;
+    width:66%;
+    margin: 100px auto;
+    border-radius: 10px;
+
+}
+
+.cta h2{
+    font-size: 2rem;
+    font-family: "Zen Dots";
+    color: #000000;
+    margin-bottom: 30px;
+
+}
+
+.contenidoFinal{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer{
+    padding: 10px 0;
+}
+
+.links{
+    width: 25%;
+}
+
+.links h4{
+    font-size: 1,2rem;
+    color: turquoise;
+    margin-bottom: 25px ;
+    position:relative;
+    font-family: "Zen dots";
+}
+
+.links h4::before{
+    font-size: 1.2rem;
+    color: turquoise;
+    height: 2px;
+    width: 50x;
+    left: 0;
+    bottom: -8px;
+    background-color: turquoise;
+    
+}
+
+.links h4::after{
+    content: " ";
+    position: absolute;
+     content: "";
+    position: absolute;
+    background-color: #0ef;
+    height: 2px;
+    width: 50px;
+    left: 0;
+    padding: 0 3px;
+    margin: auto;
+    justify-content: space-around;
+    align-items: center;
+    bottom: -3px;
+
+}
+
+
+.links ul li:not(:last-child){
+    margin-bottom: 15px;
+}
+
+.links ul li a{
+    color:  #9897a9;
+    font-size: 1.1rem;
+    font-family: "zen dots";
+    display: block;
+    text-transform: capitalize;
+    transition: -4s;
+    font-weight: 600;
+}
+
+.links ul li a:hover{
+    color: #fff;
+    transform: translateX(-10px);
+}
+.links .redes{
+    width: 220px;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+}
+
+.links .redes a{
+    height: 40px;
+    width: 40px;
+    background-color: #fff;
+    color: #000000;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    border-radius: 50%;
+    transition: .4s;
+    border: 2px solid turquoise;
+}
+
+.links .redes a:hover{
+    transform: scale(1.2);
+    color: #ffffff;
+    background: turquoise;
+}
+
